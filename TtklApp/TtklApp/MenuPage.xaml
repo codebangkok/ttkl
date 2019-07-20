@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="TtklApp.MenuPage"
+             Title="Menu">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="200"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <BoxView BackgroundColor="Green"/>
+
+        <StackLayout VerticalOptions="End"
+                     Padding="20">
+            <Label Text="Bond Surasuk"
+                   TextColor="White"
+                   FontAttributes="Bold"
+                   FontSize="18"/>
+            <Label Text="surasuk612@gmail.com"
+                   TextColor="White"
+                   FontAttributes="Bold"
+                   FontSize="18"/>
+        </StackLayout>
+
+        <StackLayout Grid.Row="1"
+                     Padding="20">
+            <Button Text="Home"
+                    x:Name="homeButton"
+                    Clicked="HomeButton_Clicked"/>
+            
+            <Button Text="Navigation Page"
+                    x:Name="navButton"
+                    Clicked="NavButton_Clicked"/>
+            
+            <Button Text="Tabbed Page"
+                    x:Name="tabButton"
+                    Clicked="TabButton_Clicked"/>
+
+            <Button Text="Product"
+                    x:Name="productButton"
+                    Clicked="ProductButton_Clicked"/>
+        </StackLayout>
+
+    </Grid>
+    
+</ContentPage>
