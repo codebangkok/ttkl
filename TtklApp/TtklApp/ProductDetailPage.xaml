@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="TtklApp.ProductDetailPage"
+             Title="Edit Product"
+             BackgroundColor="Aqua"
+             BackgroundImageSource="wallpaper.jpg">
+    
+    <Frame Margin="30"
+           CornerRadius="20"
+           VerticalOptions="Center"
+           BackgroundColor="#B0FFFFFF"
+           HasShadow="True">
+
+        <StackLayout Orientation="Vertical">
+            <Label Text="ID"/>
+            <Entry x:Name="idEntry"
+                   Placeholder="Product ID"
+                   IsReadOnly="True"/>
+
+            <Label Text="Name"/>
+            <Entry Placeholder="Product name"
+                   x:Name="nameEntry"/>
+
+            <Label Text="Price"/>
+            <Entry Placeholder="Price per unit"
+                   Keyboard="Numeric"
+                   x:Name="priceEntry"/>
+
+            <Label Text="Discontinued"/>
+            <Switch x:Name="disconSwitch"/>
+
+            <Button Text="OK"
+                    BackgroundColor="Lime"
+                    x:Name="okButton"
+                    Clicked="OkButton_Clicked"/>
+            <Button Text="Cancel"
+                    BackgroundColor="Red"
+                    x:Name="cancelButton"
+                    Clicked="CancelButton_Clicked"/>
+            <Button Text="Delete"
+                    BackgroundColor="Fuchsia"
+                    x:Name="deleteButton"
+                    Clicked="DeleteButton_Clicked"/>
+        </StackLayout>
+
+    </Frame>
+    
+</ContentPage>

@@ -22,7 +22,8 @@ namespace TtklApp
         protected async override void OnAppearing()
         {
             var client = new HttpClient();
-            var response = await client.GetAsync("http://192.168.64.112/bond/api/products");
+            client.BaseAddress = Helpers.Setting.ApiAddress;
+            var response = await client.GetAsync("api/products/getall");
 
             if (response.StatusCode == System.Net.HttpStatusCode.OK)
             {
@@ -33,11 +34,17 @@ namespace TtklApp
            
         }
 
-        private void ProductListView_ItemTapped(object sender, ItemTappedEventArgs e)
+        private async void ProductListView_ItemTapped(object sender, ItemTappedEventArgs e)
         {
             var product = e.Item as Product;
-            DisplayAlert(product.ProductName, product.CategoryName, "OK");
+            //DisplayAlert(product.ProductName, product.CategoryName, "OK");
+            await Navigation.PushAsync(new ProductDetailPage(product));
             productListView.SelectedItem = null;
+        }
+
+        private void NewButton_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new ProductNewPage());
         }
     }
 }

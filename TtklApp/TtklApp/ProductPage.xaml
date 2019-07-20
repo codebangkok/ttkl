@@ -7,6 +7,13 @@
              x:Class="TtklApp.ProductPage"
              Title="Product">
 
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="New"
+                     IconImageSource="newicon"
+                     x:Name="newButton"
+                     Clicked="NewButton_Clicked"/>
+    </ContentPage.ToolbarItems>
+
     <ListView x:Name="productListView"
               ItemTapped="ProductListView_ItemTapped">
         <ListView.ItemTemplate>

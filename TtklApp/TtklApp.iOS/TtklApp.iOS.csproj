@@ -137,4 +137,7 @@
   <ItemGroup>
     <BundleResource Include="Resources\home.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\newicon.png" />
+  </ItemGroup>
 </Project>
